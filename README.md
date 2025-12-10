@@ -1,3 +1,3 @@
-# solitonic_reservoir
-The code repository associated with the work: 'Soliton Collisions as a Computing Reservoir in the
-Nonlinear Schr¨odinger Wavefield' by Anderson M. Rodriguez. This is a walkthrough of the findings for the paper.
+# Repo build in Progress...
+
+The code repository associated with the work: 'Morphological Computation in the Nonlinear Schrodinger Wavefield: Solitonic Dynamics Enable Noise-Tolerant, Self-Organizing Stability Inaccessible to Linear System' by Anderson M. Rodriguez. This is a walkthrough of the findings for the paper.
