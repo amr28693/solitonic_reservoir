@@ -1,0 +1,265 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 AppleColorEmoji;\f2\froman\fcharset0 Times-Bold;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww13220\viewh16140\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf0 Step 1)  Install dependencies\
+\
+WORKFLOW OPTION A (fast, recommended): \
+\
+create clean environment:\
+\
+\
+python3 -m venv nlse_env\
+source nlse_env/bin/activate                                       # Windows: nlse_env\\Scripts\\activate\
+pip install numpy scipy matplotlib scikit-learn tqdm\
+\
+\
+\pard\pardeftab720\sa280\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Step 2 \'97 Run Canonical (\'93Preload\'94) Scripts in Order\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 From the repository root (e.g., solitonic_reservoir-main/):\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+python preload_scripts/2p_preload_Masterscript_analysis.py\
+python preload_scripts/3p_preload_1B_fig2_generator.py\
+python preload_scripts/6p_preload_etaV2paper1B_viz_final.py\
+python preload_scripts/7p_preload_G_T_derivatives.py\
+python preload_scripts/8p_preload_statistical_analysis.py\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\sa280\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What This Produces\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Robustness sweep plots\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 NLSE vs LSE superiority figures\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 g-sweep visualization\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Derivative/curvature analysis\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 All statistics reported in the paper\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 All plots save into:\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+preload_figures/\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+#########################################\
+\
+WORKFLOW OPTION B (Advanced): \
+\
+Full regeneration pipeline (SLOW)\
+\
+This reproduces every experiment from scratch.\
+\
+Use this ONLY if you want to regenerate all .npz data.\
+\
+
+\f1 \uc0\u9888 \u65039 
+\f0  Important: Scripts 1 and 5 take hours, depending on your machine.\
+\
+Step 1) Run the full pipeline in order\
+\
+From repo root:\
+\
+python scripts/1_Master_script_statistics.py\
+python scripts/2_Masterscript_analysis.py\
+python scripts/3_1B_fig2_generator.py\
+python scripts/5_etaV2paper1B_final.py\
+python scripts/6_etaV2paper1B_viz_final.py\
+python scripts/7_G_T_derivatives.py\
+python scripts/8_statistical_analysis.py\
+\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 This regenerates:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Full 
+\f2\b \uc0\u951  sweep (15 points \'d7 10 seeds)
+\f0\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Complete 
+\f2\b T-sweep
+\f0\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Complete 
+\f2\b g-sweep
+\f0\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 All figures and statistics\
+\pard\tx720\pardeftab720\sa240\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \strokec2 Outputs save into:\
+\pard\pardeftab720\partightenfactor0
+\cf0 data/\
+figures/\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth3020\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx5760
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+
+\f2\b \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Script\cell 
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+\cf0 Purpose\cell 
+\pard\intbl\itap1\pardeftab720\qc\partightenfactor0
+\cf0 Runtime\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx2880
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx5760
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 1_Master_script_statistics.py
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Full 15-point jitter sweep \'d7 10 seeds (NLSE vs LSE)\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\b \cf0                          Hours
+\f0\b0 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx2880
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx5760
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\b \cf0 2_Masterscript_analysis.py
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Linear regression / decay-rate analysis                    \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0                         Seconds\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx2880
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx5760
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\b \cf0 3_1B_fig2_generator.py
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Generates NLSE\'96LSE superiority margin figure\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0                         Seconds\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx2880
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx5760
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\b \cf0 5_etaV2paper1B_final.py
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Time-sweep and g-sweep simulations\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\b \cf0                         Hours
+\f0\b0 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx2880
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx5760
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\b \cf0 6_etaV2paper1B_viz_final.py
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 g-margin visualization   \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0                         Seconds\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx2880
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx5760
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\b \cf0 7_G_T_derivatives.py
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 Derivative and curvature analysis\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0                         Seconds\cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx2880
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx5760
+\clvertalt \clshdrawnil \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2\b \cf0 8_statistical_analysis.py
+\f0\b0 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0 t-tests, Bonferroni correction, Cohen\'92s d\cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf0                         Seconds\cell \lastrow\row
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\
+\
+\
+\
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f2\b\fs48 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Quick Command Summary\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf0 \strokec2 From the repo root:\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f2\b\fs28 \cf0 Canonical (Fast) Workflow
+\f3\b0\fs26 \
+\pard\pardeftab720\partightenfactor0
+\cf0 python preload_scripts/2p_preload_Masterscript_analysis.py\
+python preload_scripts/3p_preload_1B_fig2_generator.py\
+python preload_scripts/6p_preload_etaV2paper1B_viz_final.py\
+python preload_scripts/7p_preload_G_T_derivatives.py\
+python preload_scripts/8p_preload_statistical_analysis.py\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f2\b\fs28 \cf0 \
+\
+Full Regeneration (Slow) Workflow
+\f3\b0\fs26 \
+\pard\pardeftab720\partightenfactor0
+\cf0 python scripts/1_Master_script_statistics.py\
+python scripts/2_Masterscript_analysis.py\
+python scripts/3_1B_fig2_generator.py\
+python scripts/5_etaV2paper1B_final.py\
+python scripts/6_etaV2paper1B_viz_final.py\
+python scripts/7_G_T_derivatives.py\
+python scripts/8_statistical_analysis.py\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+}
