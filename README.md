@@ -1,6 +1,5 @@
-# Repo build in Progress...
-
-The code repository associated with the work: 'Morphological Computation in the Nonlinear Schrodinger Wavefield: Solitonic Dynamics Enable Noise-Tolerant, Self-Organizing Stability Inaccessible to Linear Systems' by Anderson M. Rodriguez. 
+#The code repository associated with the work: 'Morphological Computation in the Nonlinear Schrodinger Wavefield: Solitonic Dynamics Enable Noise-Tolerant, Self-Organizing Stability Inaccessible to Linear Systems'. 
+*By: Anderson M. Rodriguez*
 
 All figures in the paper can be reproduced directly using the preloaded canonical data without running long simulations.
 
@@ -98,3 +97,24 @@ Run the scripts in the following order:
 - Appendix parameter sweeps (T-sweep and g-sweep) include stochastic jitter; regenerated results may show **small numeric variation**.  
 - All script paths are **relative to the repository root**.  
 - The directories `figures/` and `preload_figures/` will be created and populated automatically during execution.
+
+
+----------------------------------------------------
+## Optional: Quickstart Demo (Not Used in the Paper)
+For users who want a short, fast, educational demonstration of the NLSE vs LSE robustness effect, a reduced-parameter Quickstart script is included:
+
+### Script Location:
+`demos/quickstart_demo.py`
+
+### Overview:
+
+This script:
+
+- Runs in ~10–15 minutes (compared to hours for the full pipeline)
+- Uses fewer seeds, fewer η values, and smaller datasets
+- Reproduces the qualitative behavior of NLSE vs LSE decay rates
+- Is intended only for illustration and sanity-checking, **not for reproduction** of the paper’s figures or statistics
+
+### Important Note:
+The official results in the manuscript come exclusively from the canonical `.npz` datasets or the full regeneration pipeline described above.
+
