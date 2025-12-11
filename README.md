@@ -4,7 +4,7 @@ The code repository associated with the work: 'Morphological Computation in the 
 
 REPO STRUCTURE:
 ```
-paper1_repo/
+NLSE_Morph_comp_repo/
 │
 ├── data/                   # Canonical .npz data
 │   ├── etaV2paper1C_robustness_sweep_STATISTICAL.npz
