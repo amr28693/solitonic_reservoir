@@ -1,7 +1,7 @@
 ## This script is for the appendices
 # Focus is on param sweeps of the weight of the nonlinear term as well as for time, T.
 
-```
+"""
 This script defines a 2D grid and Fourier space; extracts 4 global features: mass; gradient energy; mean cosine; mean sine of phase.
 
 The NLSE evolves via Split-Step Fourier method for arbitrary g and timestep DT
@@ -18,7 +18,7 @@ This sweep includes stochastic jitter and may produce slight numeric variation a
 
 Please note that this does not take as long to run as "1_Master_script_statistics.py but this is a time intensive script to run, nonetheless.
 
-```
+"""
 
 
 import numpy as np
