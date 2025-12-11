@@ -3,7 +3,7 @@
 The code repository associated with the work: 'Morphological Computation in the Nonlinear Schrodinger Wavefield: Solitonic Dynamics Enable Noise-Tolerant, Self-Organizing Stability Inaccessible to Linear System' by Anderson M. Rodriguez. This is a walkthrough of the findings for the paper.
 
 REPO STRUCTURE:
-
+```
 paper1_repo/
 │
 ├── data/                       # Canonical .npz data
@@ -26,7 +26,7 @@ paper1_repo/
 │
 ├── Full_call_demo.py            # Master reproducible pipeline
 └── README.md
-
+```
 
 
 # Reproducible Pipeline for NLSE vs LSE Reservoir Experiments
