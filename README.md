@@ -1,4 +1,4 @@
-#The code repository associated with the work: 'Morphological Computation in the Nonlinear Schrödinger Wavefield: Solitonic Dynamics Enable Noise-Tolerant, Self-Organizing Stability Inaccessible to Linear Systems'. 
+**The code repository associated with the work: 'Morphological Computation in the Nonlinear Schrödinger Wavefield: Solitonic Dynamics Enable Noise-Tolerant, Self-Organizing Stability Inaccessible to Linear Systems'.** 
 *By: Anderson M. Rodriguez*
 
 All figures in the paper can be reproduced directly using the preloaded canonical data without running long simulations.
