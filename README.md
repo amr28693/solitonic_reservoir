@@ -64,7 +64,7 @@ This repository contains the scripts, canonical data, and visualization pipeline
 
 ## 'Full Call' Quick Start
 
-1. Ensure Python ≥ 3.8 and dependencies (`numpy`, `matplotlib`, `scipy`, `sklearn`) are installed.
+1. Ensure Python ≥ 3.8 and dependencies (`numpy`, `matplotlib`, `scipy`, `scikit-learn`) are installed.
 
 2. From the repository root, run:
 
