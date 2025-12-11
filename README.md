@@ -1,6 +1,6 @@
 # Repo build in Progress...
 
-The code repository associated with the work: 'Morphological Computation in the Nonlinear Schrodinger Wavefield: Solitonic Dynamics Enable Noise-Tolerant, Self-Organizing Stability Inaccessible to Linear System' by Anderson M. Rodriguez. This is a walkthrough of the findings for the paper. The master data generation scripts can be time consuming depending on resources so there is also the option to run versions from the 'Canonical' dataset used to generate the figures and results in the main text. 
+The code repository associated with the work: 'Morphological Computation in the Nonlinear Schrodinger Wavefield: Solitonic Dynamics Enable Noise-Tolerant, Self-Organizing Stability Inaccessible to Linear Systems' by Anderson M. Rodriguez. This is a walkthrough of the findings for the paper. The master data generation scripts can be time consuming depending on resources so there is also the option to run versions from the 'Canonical' dataset used to generate the figures and results in the main text. 
 
 REPO STRUCTURE:
 ```
