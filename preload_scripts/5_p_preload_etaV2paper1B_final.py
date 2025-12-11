@@ -1,7 +1,7 @@
 ## This script is for the appendices
 # Focus is on param sweeps of the weight of the nonlinear term as well as for time, T.
 
-```
+"""
 This script defines a 2D grid and Fourier space; extracts 4 global features: mass; gradient energy; mean cosine; mean sine of phase.
 
 The NLSE evolves via Split-Step Fourier method for arbitrary g and timestep DT
@@ -15,8 +15,7 @@ NOTE: when running the 'preload_' branch of the repository, this script is also 
 
 Move along to step 6_p_preload_eta_V2paper1B_viz_final.py
 
-
-```
+"""
 
 
 import numpy as np
