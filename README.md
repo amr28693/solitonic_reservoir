@@ -15,7 +15,6 @@ NLSE_Morphological_computation_repo/
 │   └── (Canonically generated PNG/PDFs go here)
 |
 ├── preload_scripts/                # Python scripts for canonical .npz data
-│   ├── 0p_preload_soliton_fig1_generator.ipynb
 │   ├── 1p_preload_Master_script_statistics.py
 │   ├── 2p_preload_Masterscript_analysis.py
 │   ├── 3p_preload_1B_fig2_generator.py
@@ -37,6 +36,7 @@ NLSE_Morphological_computation_repo/
 │   ├── 1_Master_script_statistics.py
 │   ├── 2_Masterscript_analysis.py
 │   ├── 3_1B_fig2_generator.py
+│   ├── 4_1C_graph_extract1B_stats.ipynb
 │   ├── 5_etaV2paper1B_final.py
 │   ├── 6_etaV2paper1B_viz_final.py
 │   ├── 7_G_T_derivatives.py
