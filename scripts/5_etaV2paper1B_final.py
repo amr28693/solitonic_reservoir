@@ -14,6 +14,8 @@ Sweeps are ran for T and g, with T fixed over g sweeps and g fixed over T sweeps
 
 Results are saved to 'Data' folder
 
+This sweep includes stochastic jitter and may produce slight numeric variation across runs.
+
 Please note that this does not take as long to run as "1_Master_script_statistics.py but this is a time intensive script to run, nonetheless.
 
 ```
