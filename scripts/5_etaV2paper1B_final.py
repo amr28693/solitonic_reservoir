@@ -26,7 +26,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 # =================================================================
-# 1. SIMULATION PARAMETERS (Based on your paper's methodology)
+# 1. SIMULATION PARAMETERS (Based on paper's methodology)
 # =================================================================
 
 # Grid parameters
@@ -65,7 +65,7 @@ def get_initial_solitons(class_id):
     """
     Creates the base initial wavefield psi_0 for a given class.
     (Simplified: in real code, this would define the 3x3 lattice centers,
-    velocities, and superposition as described in your paper.)
+    velocities, and superposition as described in paper.)
     """
     # Base amplitude (sech profile sum, constant across classes)
     amplitude_base = np.zeros((NX, NY), dtype=float)
