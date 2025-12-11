@@ -15,10 +15,10 @@ NLSE_Morphological_computation_repo/
 │   └── (Canonically generated PNG/PDFs go here)
 |
 ├── preload_scripts/                # Python scripts for canonical .npz data
-│   ├── 1p_preload_Master_script_statistics.py   # only run if generating data-->see 'scripts/' pipeline
+│   ├── 1p_preload_Master_script_statistics.py   # XXX only run if generating data-->see 'scripts/' pipeline
 │   ├── 2p_preload_Masterscript_analysis.py      # Run First for 'Preload_' pipeline
 │   ├── 3p_preload_1B_fig2_generator.py          # Run Second for 'Preload_ pipeline
-│   ├── 5p_preload_etaV2paper1B_final.py         # XXXX Only run if generating data--> see 'scripts/' pipeline
+│   ├── 5p_preload_etaV2paper1B_final.py         # XXX Only run if generating data--> see 'scripts/' pipeline
 │   ├── 6p_preload_etaV2paper1B_viz_final.py     # Run Third for 'Preload_ pipeline
 │   ├── 7p_preload_G_T_derivatives.py            # Run Fourth for 'Preload_ pipeline
 │   └── 8p_preload_statistical_analysis.py       # Run Fifth for 'Preload_ pipeline
