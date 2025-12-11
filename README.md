@@ -6,15 +6,15 @@ REPO STRUCTURE:
 ```
 paper1_repo/
 │
-├── data/                       # Canonical .npz data
+├── data/                   # Canonical .npz data
 │   ├── etaV2paper1C_robustness_sweep_STATISTICAL.npz
 │   ├── etaV2g_sweep_results.npz
 │   └── time_sweep_results.npz
 │
-├── figures/                    # Output directory for figures
+├── figures/                # Output directory for figures
 │   └── (generated PNG/PDFs go here)
 │
-├── scripts/                     # Python scripts
+├── scripts/                # Python scripts
 │   ├── 0_soliton_fig1_generator.ipynb
 │   ├── 1_Master_script_statistics.py
 │   ├── 2_Masterscript_analysis.py
@@ -24,7 +24,7 @@ paper1_repo/
 │   ├── 7_G_T_derivatives.py
 │   └── 8_statistical_analysis.py
 │
-├── Full_call_demo.py            # Master reproducible pipeline
+├── Full_call_demo.py       # Master reproducible pipeline
 └── README.md
 ```
 
