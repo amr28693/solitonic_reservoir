@@ -6,6 +6,19 @@ All figures in the paper can be reproduced directly using the preloaded canonica
 
 A full data-generation pipeline is also provided for users who wish to regenerate the Nonlinear Schrödinger Eqn//Linear Schrödinger Eqn robustness sweeps, nonlinearity scans, and derivative analyses.
 
+
+###########################
+
+# Reproducibility options
+
+## Option A (Recommended when time/computational expense considerations is paramount):
+  * Regenerate all figures and statistics from precomputed data
+
+## Option B (Full recomputation): 
+  * rerun all simulations from scratch
+
+###########################
+
 REPO STRUCTURE:
 ```
 NLSE_Morphological_computation_repo/
@@ -58,7 +71,7 @@ This repository provides two fully reproducible paths for generating all figures
 
 ----------------------------------
 
-## 1. Canonical (Preload) Pipeline (fast)
+## A. Canonical (Preload) Pipeline (fast)
 
 This path uses preloaded `.npz` files that correspond exactly to the figures and statistics in the paper.  
 No new NLSE/LSE simulations are generated.
@@ -73,7 +86,7 @@ Run the scripts **in this order**:
 
 This reproduces all figures and quantitative results deterministically.
 
-## 2. Full Pipeline — regenerate all data from scratch
+## B. Full Pipeline — regenerate all data from scratch
 
 This path recomputes all simulations, sweeps, and statistical analyses.
 
