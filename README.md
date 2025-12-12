@@ -11,7 +11,7 @@ A full data-generation pipeline is also provided for users who wish to regenerat
   Both options A and B are decomposed below the repo structure
 
 ## Option A (Recommended when time/computational expense considerations is paramount):
-  * Regenerate all figures and statistics from precomputed data
+  * Regenerate all figures and statistics from the manuscript with precomputed data
 
 ## Option B (Full recomputation): 
   * rerun all simulations from scratch
