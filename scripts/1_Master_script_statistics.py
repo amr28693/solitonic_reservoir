@@ -79,7 +79,7 @@ def get_initial_solitons(class_id):
 
 def apply_jitter(psi, eta, rng): # UPDATED: Accepts rng object
     """
-    Adds i.i.d. Gaussian phase and amplitude jitter with std dev eta.
+    Adds uniform phase jitter in [-eta, eta], and a small class-independent Gaussian amplitude perturbation proportional to eta.
     Uses the provided numpy RandomState (rng) for reproducibility per seed/process.
     """
     if eta == 0.0:
