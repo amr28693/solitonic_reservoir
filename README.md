@@ -7,9 +7,8 @@ All figures in the paper can be reproduced directly using the preloaded canonica
 A full data-generation pipeline is also provided for users who wish to regenerate the Nonlinear Schrödinger Eqn//Linear Schrödinger Eqn robustness sweeps, nonlinearity scans, and derivative analyses.
 
 
-###########################
-
 # Reproducibility options
+  Both options A and B are decomposed below the repo structure
 
 ## Option A (Recommended when time/computational expense considerations is paramount):
   * Regenerate all figures and statistics from precomputed data
@@ -17,7 +16,7 @@ A full data-generation pipeline is also provided for users who wish to regenerat
 ## Option B (Full recomputation): 
   * rerun all simulations from scratch
 
-###########################
+
 
 REPO STRUCTURE:
 ```
