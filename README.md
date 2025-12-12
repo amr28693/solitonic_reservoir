@@ -10,7 +10,7 @@ A full data-generation pipeline is also provided for users who wish to regenerat
 # Reproducibility options
   Both options A and B are decomposed below the repo structure
 
-## Option A (Recommended when time/computational expense considerations is paramount):
+## Option A (Recommended when time/computational expense considerations are paramount):
   * Regenerate all figures and statistics from the manuscript with precomputed data
 
 ## Option B (Full recomputation): 
