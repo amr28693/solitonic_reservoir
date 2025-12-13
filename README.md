@@ -48,7 +48,7 @@ NLSE_Morphological_computation_repo/
 │   └── (User generated PNG/PDFs go here)
 │
 ├── scripts/                # Full data-generation + analysis pipeline
-│   ├── 0_soliton_fig1_generator.ipynb            # Illustrative; results not depicted in the quantitative results
+│   ├── 0_soliton_fig1_generator.ipynb            # Illustrative; not depicted in the quantitative results
 │   ├── 1_Master_script_statistics.py             # Beginning of quantitative results pipeline
 │   ├── 2_Masterscript_analysis.py
 │   ├── 3_1B_fig2_generator.py
