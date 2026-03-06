@@ -2,13 +2,13 @@
 
 
 """
-Statistical Analysis for NLSE vs LSE Reservoir Comparison
+Statistical Analysis for NLSE vs LSE System Comparison
 
 This script computes t-tests with Bonferroni correction and Cohen's d effect sizes to evaluate the 
 performance differences between NLSE (Nonlinear Schrödinger Equation) and LSE (Linear Schrödinger Equation) reservoirs. 
 
 Key Steps:
-1. Loads accuracy data for NLSE and LSE reservoirs from a predefined dataset.
+1. Loads accuracy data for NLSE and LSE Systems from a predefined dataset.
 2. Identifies the critical regime (η > 1.05) for comparison.
 3. Computes t-statistics, p-values, and Cohen's d effect sizes for each critical regime.
 4. Applies Bonferroni correction to adjust for multiple comparisons.
