@@ -1,4 +1,4 @@
-# This script generates the NLSE Superiority Margin Over Linear Reservoir Figure 
+# This script generates the NLSE Superiority Margin Over Linear System Figure 
 # It will generate and save a .png and .pdf file of the image
 
 import numpy as np
@@ -72,7 +72,7 @@ plt.text(1.6, 17.25,
 plt.ylim(-10, 25) 
 plt.xlabel(r'Jitter Strength $\eta$ (a.u.)', fontsize=12)
 plt.ylabel(r'Accuracy Margin ($\Delta$ Acc, \%)', fontsize=12)
-plt.title('NLSE Superiority Margin over Linear Reservoir', fontsize=14)
+plt.title('NLSE Superiority Margin over Linear System', fontsize=14)
 
 # Legend upper left
 plt.legend(loc='upper left', ncol=2, fontsize=10)
