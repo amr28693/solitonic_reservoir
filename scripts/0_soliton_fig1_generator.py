@@ -1,11 +1,12 @@
 # use this in paper
-# Script '0' for Figure 1
+# for 'Paper 1' Figure 1 (CORRECTED)
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
 Generate Figure 1 for Paper 1: Evolution visualization (4 classes)
+Matches Script 1 experimental parameters
 """
 
 import numpy as np
@@ -13,10 +14,10 @@ import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 
 # =============================================================================
-# Grid setup (copy from Paper 1)
+# Grid setup (MATCHED TO SCRIPT 1)
 # =============================================================================
 
-L = 12.0
+L = 20.0  
 Nx, Ny = 64, 64
 dx, dy = L / Nx, L / Ny
 x = np.linspace(-L/2, L/2, Nx)
@@ -28,87 +29,59 @@ ky = 2 * np.pi * np.fft.fftfreq(Ny, d=dy)
 KX, KY = np.meshgrid(kx, ky, indexing="xy")
 k2 = KX**2 + KY**2
 
-dt = 0.01
-Nt = 60
+dt = 0.001  
+T_final = 1.0  # Match Script 1
+Nt = int(T_final / dt)  # 1000 steps
 L_op = np.exp(-1j * k2 * dt / 2)
 
 def sech(r):
     return 1.0 / np.cosh(r)
 
-def place_grid(N, spacing, cx, cy):
-    side = int(np.ceil(np.sqrt(N)))
-    gx, gy = np.meshgrid(
-        (np.arange(side) - (side - 1) / 2) * spacing,
-        (np.arange(side) - (side - 1) / 2) * spacing,
-    )
-    centers = np.column_stack((gx.ravel(), gy.ravel()))
-    return centers[:N] + np.array([cx, cy])
-
 def make_initial_condition(class_id, rng, jitter=0.0):
-    N_static = 1
-    N_moving = 1
-    spacing_static = 1.4
-    spacing_moving = 1.4
-
-    if class_id == 0:
-        offset_static = (-2.5, 0.0)
-        offset_moving = (2.5, 0.0)
-        vx1, vy1 = 3.0, 0.0
-        vx2, vy2 = -3.0, 0.0
-    elif class_id == 1:
-        offset_static = (0.0, -2.5)
-        offset_moving = (0.0, 2.5)
-        vx1, vy1 = 0.0, 3.0
-        vx2, vy2 = 0.0, -3.0
-    elif class_id == 2:
-        offset_static = (-2.0, -2.0)
-        offset_moving = (2.0, 2.0)
-        vx1, vy1 = 2.0, 2.0
-        vx2, vy2 = -2.0, -2.0
-    elif class_id == 3:
-        offset_static = (-2.0, 2.0)
-        offset_moving = (2.0, -2.0)
-        vx1, vy1 = 2.0, -2.0
-        vx2, vy2 = -2.0, 2.0
-    else:
-        raise ValueError("class_id must be 0,1,2,3")
-
-    static_pos = place_grid(N_static, spacing_static, *offset_static)
-    moving_pos = place_grid(N_moving, spacing_moving, *offset_moving)
-
-    psi1 = np.zeros((Ny, Nx), dtype=np.complex128)
-    for cx, cy in static_pos:
-        r = np.sqrt((X - cx)**2 + (Y - cy)**2)
-        psi1 += sech(r)
-    psi1 /= np.sqrt(np.sum(np.abs(psi1)**2) * dx * dy)
-    psi1 *= np.exp(1j * (vx1 * X + vy1 * Y))
-
-    psi2 = np.zeros((Ny, Nx), dtype=np.complex128)
-    for cx, cy in moving_pos:
-        r = np.sqrt((X - cx)**2 + (Y - cy)**2)
-        psi2 += sech(r)
-    psi2 /= np.sqrt(np.sum(np.abs(psi2)**2) * dx * dy)
-    psi2 *= np.exp(1j * (vx2 * X + vy2 * Y))
-
-    psi0 = psi1 + psi2
-    psi0 /= np.sqrt(np.sum(np.abs(psi0)**2) * dx * dy)
-
+    """
+    CORRECTED: Matches Script 1 exactly.
+    Fixed bump positions, only phase wavevector varies by class; higher jitter run
+    """
+    # Fixed centers for ALL classes (matches Script 1)
+    centers = [(L/4, L/4), (-L/4, -L/4)]
+    
+    # Build amplitude envelope (identical for all classes)
+    amplitude_base = np.zeros((Ny, Nx), dtype=float)
+    for cx, cy in centers:
+        R = np.sqrt((X - cx)**2 + (Y - cy)**2)
+        amplitude_base += sech(R)
+    
+    # Phase wavevector varies by class (matches Script 1)
+    k_map = {
+        0: (0.5, 0.5),   # Diagonal
+        1: (0.5, -0.5),  # Anti-diagonal
+        2: (0.0, 1.0),   # Vertical
+        3: (1.0, 0.0),   # Horizontal
+    }
+    kx_init, ky_init = k_map[class_id]
+    phase_base = np.exp(1j * (kx_init * X + ky_init * Y))
+    
+    psi0 = amplitude_base * phase_base
+    psi0 = psi0 / np.sqrt(np.sum(np.abs(psi0)**2) * dx * dy) * L  # Normalize
+    
+    # Apply jitter (matches Script 1)
     if jitter > 0.0:
         phase_noise = rng.uniform(-jitter, jitter, (Ny, Nx))
         amp_noise = 0.1 * jitter * rng.standard_normal((Ny, Nx))
-        psi0 = (np.abs(psi0) + amp_noise) * np.exp(
-            1j * (np.angle(psi0) + phase_noise)
-        )
-
+        amplitude = np.abs(psi0) + amp_noise
+        amplitude[amplitude < 0] = 0.0
+        psi0 = amplitude * np.exp(1j * (np.angle(psi0) + phase_noise))
+    
     return psi0
 
-def evolve_psi(psi0, Nt=Nt, dt=dt):
+def evolve_psi(psi0, Nt=Nt, dt=dt, g=1.0):
+    """Split-step Fourier method (matches Script 1)"""
     psi = psi0.copy()
     for _ in range(Nt):
         psi_hat = np.fft.fft2(psi)
         psi_hat *= L_op
         psi = np.fft.ifft2(psi_hat)
-        psi *= np.exp(-1j * np.abs(psi)**2 * dt)
+        psi *= np.exp(1j * -g * np.abs(psi)**2 * dt)  # Nonlinear step
         psi_hat = np.fft.fft2(psi)
         psi_hat *= L_op
         psi = np.fft.ifft2(psi_hat)
@@ -120,7 +93,7 @@ def evolve_psi(psi0, Nt=Nt, dt=dt):
 # =============================================================================
 
 if __name__ == "__main__":
-    print("Generating Figure 1: Evolution visualization...")
+    print("Generating Figure 1: Hi Jitter Evolution visualization (CORRECTED)...")
     
     jitter = 0.1
     seed = 36
@@ -129,13 +102,12 @@ if __name__ == "__main__":
     fig = plt.figure(figsize=(14, 10))
     gs = GridSpec(4, 3, figure=fig, hspace=0.35, wspace=0.3)
     
-    class_names = ['Horizontal\nCollision', 'Vertical\nCollision', 
-                   'Diagonal\nCollision', 'Anti-diagonal\nCollision']
+    class_names = ['Diagonal', 'Anti-diagonal', 'Vertical', 'Horizontal']
     
     for c in range(4):
         print(f"  Processing class {c}...")
         psi0 = make_initial_condition(c, rng, jitter=jitter)
-        psiT = evolve_psi(psi0, Nt=Nt, dt=dt)
+        psiT = evolve_psi(psi0, Nt=Nt, dt=dt, g=1.0)
         
         # Initial amplitude
         ax0 = fig.add_subplot(gs[c, 0])
@@ -186,6 +158,6 @@ if __name__ == "__main__":
     cbar2 = fig.colorbar(im2, cax=cbar_ax2, orientation='horizontal')
     cbar2.set_label('Amplitude', fontsize=10)
     
-    plt.savefig('figures/2soli_etaV2paper1_figure1.png', dpi=300, bbox_inches='tight')
-    plt.savefig('figures/2_solietaV2paper1_figure1.pdf', bbox_inches='tight')
-    print("\n✓ Saved: figures/2soli_etaV2paper1_figure1.png/pdf")
+    plt.savefig('2copped_paper1_figure1_CORRECTED.png', dpi=300, bbox_inches='tight')
+    plt.savefig('2copped_paper1_figure1_CORRECTED.pdf', bbox_inches='tight')
+    print("\n✓ Saved: copped_paper1_figure1_CORRECTED.png/pdf")
