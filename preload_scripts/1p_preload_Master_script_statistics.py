@@ -121,7 +121,7 @@ def nlse_step(psi_n, dt, g):
     return psi_next
 
 def extract_features(psi):
-    """Extracts 4 control features and 260 reservoir features."""
+    """Extracts 4 control features and 260 system features."""
     
     # --- Global Control Features (4 features) ---
     amplitude = np.abs(psi)
@@ -140,7 +140,7 @@ def extract_features(psi):
     
     global_features = np.array([mean_cos, mean_sin, mass, K])
     
-    # --- Reservoir Features (256 + 4 features) ---
+    # --- Features (256 + 4 features) ---
     
     # Downsample amplitude (16x16 = 256 features)
     downsampled_amplitude = amplitude[::DOWN_FACTOR, ::DOWN_FACTOR].flatten()
