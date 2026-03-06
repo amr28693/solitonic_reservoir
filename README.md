@@ -20,7 +20,7 @@ A full data-generation pipeline is also provided for users who wish to regenerat
 
 REPO STRUCTURE:
 ```
-NLSE_Morphological_computation_repo/
+NLSE_TDNS_computation_repo/
 │
 ├── preload_data/                   # Canonical .npz data
 │   ├── preload_etaV2paper1C_robustness_sweep_STATISTICAL.npz
@@ -66,7 +66,7 @@ NLSE_Morphological_computation_repo/
 ```
 
 
-# Reproducible Pipeline for NLSE vs LSE Reservoir Experiments
+# Reproducible Pipeline for NLSE vs LSE Experiments
 
 # Reproducible Pipeline Overview
 
