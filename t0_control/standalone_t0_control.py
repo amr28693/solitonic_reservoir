@@ -239,17 +239,17 @@ def make_comparison_figure(eta, mean_t0, std_t0, existing, output_dir):
 
     ax.errorbar(eta, mean_t0, yerr=std_t0,
                 fmt='s-', color='#9467bd', alpha=0.85, capsize=3, markersize=5,
-                label='t=0 reservoir features (260-dim, NO evolution)')
+                label='t=0 features (260-dim, NO evolution)')
 
     ax.errorbar(eta, existing['mean_acc_res_linear'],
                 yerr=existing['std_acc_res_linear'],
                 fmt='b--', alpha=0.7, capsize=3,
-                label='LSE reservoir (260-dim, g=0, evolved)')
+                label='LSE (260-dim, g=0, evolved)')
 
     ax.errorbar(eta, existing['mean_acc_res_nonlinear'],
                 yerr=existing['std_acc_res_nonlinear'],
                 fmt='o-', color='#d45500', alpha=0.85, capsize=3, markersize=5,
-                label='NLSE reservoir (260-dim, g=1, evolved)')
+                label='NLSE (260-dim, g=1, evolved)')
 
     ax.axhline(0.25, ls=':', color='gray', alpha=0.5, label='Chance (25%)')
     ax.set_xlabel('Phase Jitter Strength η', fontsize=13)
