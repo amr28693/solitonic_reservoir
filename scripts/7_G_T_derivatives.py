@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 """
-Derivative Analysis of NLSE Reservoir Performance
+Derivative Analysis of NLSE System Performance
 
 This script calculates and visualizes the first and second derivatives of NLSE reservoir 
 performance with respect to time and nonlinearity strength. Specifically:
@@ -103,7 +103,7 @@ ax1_twin.axhline(0, color='gray', linestyle=':', alpha=0.5)
 ax1.set_xlabel('Evolution Time T', fontsize=12)
 ax1.set_ylabel('Test Accuracy [%]', fontsize=12, color='blue')
 ax1_twin.set_ylabel('Rate of Change [%/unit time]', fontsize=12, color='red')
-ax1.set_title(r'Temporal Self-Organization ($\eta=2.0$, $g=1.0$)', fontsize=13)
+ax1.set_title(r'Temporal Self-Stabilization ($\eta=2.0$, $g=1.0$)', fontsize=13)
 ax1.tick_params(axis='y', labelcolor='blue')
 ax1_twin.tick_params(axis='y', labelcolor='red')
 ax1.grid(True, alpha=0.3)
