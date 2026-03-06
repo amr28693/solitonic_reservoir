@@ -1,4 +1,4 @@
-# The code repository associated with the work: 'Morphological Computation in the Nonlinear Schrödinger Wavefield: Solitonic Dynamics Enable Noise-Tolerant, Self-Organizing Stability Inaccessible to Linear Systems'
+# The code repository associated with the work: 'Nonlinear Wavefield Dynamics as a Computational Substrate: Phase-to-Amplitude Conversion and Noise-Tolerant Information Processing in the Nonlinear Schrödinger Equation'
 
 *By: Anderson M. Rodriguez*
 
@@ -26,6 +26,10 @@ NLSE_Morphological_computation_repo/
 │   ├── preload_etaV2paper1C_robustness_sweep_STATISTICAL.npz
 │   ├── preload_etaV2g_sweep_results.npz
 │   └── preload_time_sweep_results.npz
+│
+├── t0_control/                     # 260-dim initial-state control experiment
+│   ├── standalone_t0_control.py
+│   └── t0_control_results.npz
 │
 ├── preload_figures/                # Output directory for figures from canonical data
 │   └── (Canonically generated PNG/PDFs go here)
