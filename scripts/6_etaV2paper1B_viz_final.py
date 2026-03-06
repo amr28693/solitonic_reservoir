@@ -36,7 +36,7 @@ plt.axvline(0, color='gray', linestyle=':')
 plt.xlim(-0.05, 1.05)
 plt.xlabel(r'Nonlinearity Strength $g$ (a.u.)', fontsize=12)
 plt.ylabel(r'Accuracy Margin over LSE ($g=0$) [\%]', fontsize=12)
-plt.title(r'Sensitivity of Reservoir Robustness to Nonlinearity $g$', fontsize=12)
+plt.title(r'Sensitivity of System Robustness to Nonlinearity $g$', fontsize=12)
 plt.legend(loc='lower left')
 plt.grid(True, which='major', linestyle=':', alpha=0.7)
 
