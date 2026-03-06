@@ -211,9 +211,9 @@ if not os.path.exists('./figures'):
 
 plt.figure(figsize=(10, 6))
 plt.plot(ETA_SWEEP, mean_nl * 100, 'o-', color='red', linewidth=2, 
-         markersize=8, label='NLSE Reservoir (g=1.0)')
+         markersize=8, label='NLSE System (g=1.0)')
 plt.plot(ETA_SWEEP, mean_lin * 100, 's--', color='blue', linewidth=2, 
-         markersize=8, label='LSE Reservoir (g=0.0)')
+         markersize=8, label='LSE System (g=0.0)')
 plt.plot(ETA_SWEEP, mean_con * 100, '^:', color='gray', linewidth=1, 
          markersize=6, label='Static Control')
 plt.axhline(25, color='black', linestyle='-.', linewidth=1, label='Chance Level (25%)')
