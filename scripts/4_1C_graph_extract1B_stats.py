@@ -23,13 +23,13 @@ std_con = data['std_acc_con_benchmark']
 # --- Plot Generation (Final Figure 2) ---
 plt.figure(figsize=(9, 6))
 
-# 1. NLSE Reservoir (g=1.0) with error bars
+# 1. NLSE System (g=1.0) with error bars
 plt.errorbar(eta_values, mean_nl, yerr=std_nl, fmt='o-', capsize=5,
-             color='orange', linewidth=2, label=r'NLSE Reservoir ($g=1.0$)')
+             color='orange', linewidth=2, label=r'NLSE System ($g=1.0$)')
 
-# 2. LSE Reservoir (g=0.0) with error bars
+# 2. LSE System (g=0.0) with error bars
 plt.errorbar(eta_values, mean_lin, yerr=std_lin, fmt='s--', capsize=5,
-             color='purple', linewidth=2, label=r'LSE Reservoir ($g=0.0$)')
+             color='purple', linewidth=2, label=r'LSE System ($g=0.0$)')
 
 # 3. Static Control (Initial state features) with error bars
 plt.errorbar(eta_values, mean_con, yerr=std_con, fmt='^:', capsize=5,
@@ -39,7 +39,7 @@ plt.errorbar(eta_values, mean_con, yerr=std_con, fmt='^:', capsize=5,
 plt.axhline(0.25, color='black', linestyle='-.', alpha=0.5, label='Chance Level (25%)')
 plt.xlabel(r'Initial Jitter Strength $\eta$ (a.u.)', fontsize=14)
 plt.ylabel('Classification Test Accuracy', fontsize=14)
-plt.title('Statistical Robustness Sweep: NLSE vs. LSE Reservoir', fontsize=16)
+plt.title('Statistical Robustness Sweep: NLSE vs. LSE System', fontsize=16)
 plt.ylim(0, 1.05)
 plt.legend(loc='lower left', fontsize=11)
 plt.grid(True, which='both', linestyle='--', linewidth=0.5, alpha=0.7)
