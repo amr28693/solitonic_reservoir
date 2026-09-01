@@ -81,7 +81,7 @@ def evolve_psi(psi0, Nt=Nt, dt=dt, g=1.0):
         psi_hat = np.fft.fft2(psi)
         psi_hat *= L_op
         psi = np.fft.ifft2(psi_hat)
-        psi *= np.exp(1j * -g * np.abs(psi)**2 * dt)  # Nonlinear step
+        psi *= np.exp(1j * g * np.abs(psi)**2 * dt)  # Nonlinear step
         psi_hat = np.fft.fft2(psi)
         psi_hat *= L_op
         psi = np.fft.ifft2(psi_hat)
