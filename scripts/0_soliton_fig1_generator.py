@@ -20,8 +20,8 @@ from matplotlib.gridspec import GridSpec
 L = 20.0  
 Nx, Ny = 64, 64
 dx, dy = L / Nx, L / Ny
-x = np.linspace(-L/2, L/2, Nx)
-y = np.linspace(-L/2, L/2, Ny)
+x = np.linspace(-L/2, L/2, Nx, endpoint=False)
+y = np.linspace(-L/2, L/2, Ny, endpoint=False)
 X, Y = np.meshgrid(x, y)
 
 kx = 2 * np.pi * np.fft.fftfreq(Nx, d=dx)
